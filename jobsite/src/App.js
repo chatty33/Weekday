@@ -1,21 +1,14 @@
 import "./App.css";
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import Jobcard from "./components/jobcard";
+import Header from "./components/header";
 
 function App() {
   return (
     <div className="App">
       {/* Header */}
-      <div className="header">
-        <img
-          className="weekday-icon"
-          src="/weekday.png"
-          alt="weekday icon"
-          width={50}
-          height={50}
-        />
-        <h1 className="title"> Weekday </h1>
-      </div>
+      <Header/>
 
       {/* filter buttons */}
       <div className="filter">
@@ -57,6 +50,10 @@ function App() {
       </div>
 
       {/* job cards */}
+      <Jobcard />
+      <Jobcard />
+      <Jobcard />
+      <Jobcard />
     </div>
   );
 }
