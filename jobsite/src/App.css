@@ -1,0 +1,21 @@
+.header{
+  display: flex;
+  background-color: rgb(219, 234, 247);
+  height: 80px;
+}
+.filter{
+  display: flex;
+  width: auto;
+  height: auto;
+}
+
+.weekday-icon{
+  padding: 18px;
+}
+.App {
+  text-align: center;
+}
+
+.title{
+  font-size: 50;
+}
