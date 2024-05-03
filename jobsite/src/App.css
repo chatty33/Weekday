@@ -1,19 +1,4 @@
-.header{
-  display: flex;
-  background-color: rgb(219, 234, 247);
-  height: 80px;
-}
-.filter{
-  display: flex;
-  width: auto;
-  height: auto;
-  margin: 10px ;
-  gap: 15px;
-}
 
-.weekday-icon{
-  padding: 18px;
-}
 .App {
   text-align: center;
 }
@@ -22,9 +7,309 @@
   font-size: 50;
 }
 
-.container {
+.App {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.experience {
+  font-size: 10px;
+  text-align: left;
+  font-size: 10px;
+  margin: 0px 0px;
+}
+
+.no-job-found {
+  color: black;
+}
+
+.bold-light {
+  margin-left: -160px;
+  margin-top: -20px;
+  color: yellow;
+}
+
+.minimum-exp {
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  color: #888;
+}
+
+.view-jd {
+  cursor: pointer;
+  color: rgb(61, 61, 255);
+  position: absolute;
+  bottom: -15px; 
+  right: 110px; 
+  z-index: 1; /* Ensure the button appears above other content */
+}
+
+.minpay {
+  display: none;
+}
+
+.cards-container {
+  text-align: center;
+}
+
+/* Hide horizontal scrollbar */
+body {
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar in Chrome, Safari, and Opera */
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+.role {
+  width: 100px;
+}
+
+.empl_num {
+  width: 200px;
+}
+
+.job-image {
+  width: 100px;
+  height: 100px;
+  float: left; /* Float the image to the left */
+  margin-right: 10px; /* Add margin-right to create space between image and text */
+}
+
+.card-jobrole {
+  font-size: 11px;
+  color: #888;
+  font-weight: bold;
+  position: relative;
+  top: 10px;
+  /* left: 70px; */
+  text-align: left;
+  margin: 0px;
+}
+
+.location {
+  color: #555;
+  font-weight: bold; 
+  margin-top: 14px;
+  text-align: left;
+  font-size: 11px;
+}
+
+.Job-id {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.estimate-salary {
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap; /* Ensures that text does not wrap to the next line */
+  /* overflow: hidden; Hides any overflow */
+  text-overflow: ellipsis;
+}
+
+.Job-content {
+  max-height: 160px;
+  font-weight: 400;
+  margin-top: 0px;
+}
+
+.search-container {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.search {
+  background-color: transparent;
+  color: grey;
+  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.search-button {
+  background-color: transparent;
+  color: grey;
+  border: none;
+  cursor: pointer;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  width: 1000px;
+}
+
+.dropdown-collection {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown {
+  background-color: transparent;
+  color: grey;
+  border: 1px solid grey;
+  padding: 8px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 674px) {
+  .dropdown {
+    margin: 5px;
+    flex-basis: 100%; /* Set to full width */
+  }
+}
+
+.dropdown option {
+  background-color: #282c34;
+  color: white;
+}
+
+.dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.dropdown::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  height: 500px;
+  color: #282c34;
+  border-radius: 22px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  vertical-align: top;
+  width: 270px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
   margin-bottom: 20px;
+  
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.grid-item {
+ padding-left: 0px ;
+  align-items: left ;
+}
+
+.grid-item-value{
+  align-items: left ;
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+.card-content {
+  max-height: 300px; /* Limit the height of the content */
+  overflow: hidden; /* Hide overflowing content */
+  position: relative; /* Position relative for absolute positioning of gradient */
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.about-company {
+  text-align: left;
+  font-weight: 450;
+  margin: 0px 0px;
+}
+
+.about-us {
+  text-align: left;
+  font-family: 550;
+  margin: 0px 0px;
+}
+
+.card-gradient {
+  position: absolute; /* Position the gradient overlay */
+  bottom: 0; /* Align to the bottom */
+  left: 0;
+  right: 0;
+  height: 100px; /* Height of the gradient */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    white
+  ); /* Add a gradient overlay */
+}
+
+.blue-botton {
+  color: #4943da;
+}
+
+.no-data-found {
+  color: black;
+}
+
+
+
+.custom-button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: center; /* Add this line */
+  font-weight: 700;
+}
+
+.bold-icon {
+  margin-left: 5px;
+  color: rgb(216, 216, 19);
+  border-color: rgb(242, 138, 2);
+}
+
+.green-button {
+  background-color: #54efc3;
+  color: black;
+}
+
+.blue-button {
+  background-color: blue;
+  color: white;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+  cursor: pointer; /* Change cursor to pointer */
 }

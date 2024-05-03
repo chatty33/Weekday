@@ -1,16 +1,63 @@
-import React from 'react'
+import React from "react";
+import { fetchJobDetails } from "../store/detailsReducer";
+import BoltIcon from "@mui/icons-material/Bolt";
+import { useDispatch } from "react-redux";
+import jobImage from "./weekday.png"
 
-const Jobcard = () => {
+function Jobcard({
+  Name,
+  title,
+  content,
+  location,
+  experience,
+  minPay,
+  maxPay,
+  logo,
+  buttonText,
+  buttonText2,
+}) {
+
+  const displaySalary =
+    minPay !== null
+      ? `Estimated Salary: ₹${minPay} - ₹${maxPay} LPA ✅`
+      : `Estimated Salary: Up to ₹${maxPay} LPA ✅`;
+
   return (
-    <div className='container'>
-       <div>
-       <h1>company name</h1>
-       <h3> role </h3>
-       <h4> Location </h4>
-       </div>
-       <h3> Estimated salary: $18 - 35LPA </h3>
+    <div className="card">
+      <div className="">
+        <div className="">
+          <img src={logo} alt="Job Image" className="job-image" />
+        </div>
+        
+          <h3 className="Job-id">{Name}</h3>
+          <h3 className="card-jobrole">{title}</h3>
+          <h3 className="location">{location}</h3>
+        
+        <p className="estimate-salary">{displaySalary}</p>
+      </div>
+      <h3 className="about-company">About Company: </h3>
+      <h5 className="about-us"> About us</h5>
+      <div className="card-content">
+        <p className="Job-content">{content}</p>
+        <p className="view-jd">View job</p>
+        <div className="card-gradient"></div> {/* Added gradient overlay */}
+      </div>
+      <p className="minpay">{minPay}</p>
+      {experience !== null && (
+        <div>
+          <h3 className="minimum-exp">Minimum Experience</h3>
+          <p className="experience">{experience} years</p>
+        </div>
+      )}
+      <button className="custom-button green-button" >
+        <span className="bold-icon">
+          <BoltIcon />
+        </span>
+        {buttonText}
+      </button>
+      <button className="custom-button blue-button">{buttonText2}</button>
     </div>
-  )
+  );
 }
 
-export default Jobcard
+export default Jobcard;
